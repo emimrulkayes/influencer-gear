@@ -71,14 +71,16 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid #E02C6D;
 }
 .btn:hover {
-    /* letter-spacing: 0.75px; */
+    letter-spacing: 0.75px;
     background: transparent;
     color: #E02C6D;
+}
+.btn:hover i::before {
+    padding-left: 2px;
 }
 
 .btn i {
     vertical-align: middle;
-    padding-left: 5px;
 }
 
 /*----- Header Area Style Start -----*/
@@ -150,6 +152,9 @@ a.active {
 
 /* Bannner Area Style 
 ---------------------------------*/
+.banner-area {
+    padding-bottom: 100px;
+}
 .banner-layout {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -191,7 +196,7 @@ a.active {
     content: '';
     width: 100%;
     height: 1px;
-    background: linear-gradient(rgba(192, 204, 218, 0.1), rgba(192, 204, 218, 0.6), rgba(192, 204, 218, 0.1));
+    background: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.38%, rgba(192, 204, 218, 0.1) 100%);
     position: absolute;
     top: -30px;
 }
@@ -199,7 +204,7 @@ a.active {
     content: '';
     width: 100%;
     height: 1px;
-    background: linear-gradient(rgba(192, 204, 218, 0.1), rgba(192, 204, 218, 0.6), rgba(192, 204, 218, 0.1));
+    background: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.38%, rgba(192, 204, 218, 0.1) 100%);
     position: absolute;
     bottom: -30px;
 }
@@ -238,6 +243,7 @@ a.active {
     background: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
     padding: 17px 15px;
+    border-radius: 5px;
 }
 .item:hover .item-info .item-title a {
     color: #E02C6D;
@@ -324,12 +330,54 @@ a.active {
 /* Collection Area Style End 
 ---------------------------------*/
 
+/* Subscribe Area Style 
+---------------------------------*/
+.subscribe-area {
+    background: #f8f8f8;
+}
+.subscribe-area .subscribe-layout {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+.subscribe-area .subscribe-layout .img-area .img-box {
+    background: transparent;
+}
+.subscribe-content .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #0A0826;
+}
+.subscribe-content form {
+    display: inline-block;
+    width: 100%;
+    margin-top: 30px;
+}
+.subscribe-content form .form-control {
+    height: 30px;
+    padding: 5px 15px;
+    border: 1px solid #E02C6D;
+    border-radius: 30px;
+    width: 70%;
+    outline: none;
 
-
-
-
-
-
+}
+.subscribe-content form .submit-btn {
+    font-size: 18px;
+    color: #0A0826;
+    margin-left: -50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.subscribe-content form .submit-btn:hover {
+    color: #E02C6D;
+}
+/* Subscribe Area Style End
+---------------------------------*/
 
 
 /* Footer Area Style 
