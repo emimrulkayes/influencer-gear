@@ -1,6 +1,20 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Saira+Stencil+One&display=swap');
 
+/*
+========================================
+=========== Author Details =============
+========================================
+  Template name : Influencer-Gear - Creative Landing Page;   "
+  Author : MD IMRUL KAYES;             "
+  Version : 1.0;                       "
+  Created : 15-01-2022;                "
+  Last update : 15-01-2022;            "
+========================================
+========================================
+*/
+
+/* Google Font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Saira+Stencil+One&display=swap');
 
 body {
     padding: 0;
@@ -18,11 +32,6 @@ body {
     padding: 0 15px;
     margin: 0 auto;
 }
-
-.h-width {
-    width: 50%;
-}
-
 .grid {
     display: grid;
     grid-row-gap: 30px;
@@ -165,8 +174,6 @@ a.active {
 .nav-right .shopping-cart {
     font-size: 24px;
 }
-/* Header Area Style End 
----------------------------------*/
 
 /* Mobile Menu Area Style Start
 ---------------------------------*/
@@ -259,7 +266,7 @@ a.active {
 #toggle-menu input:checked ~ ul {
   transform: none;
 }
-/* Mobile Menu Area Style 
+/* Mobile Menu & Header Area Style 
 ---------------------------------*/
 
 /* Bannner Area Style 
@@ -294,7 +301,7 @@ a.active {
     height: 414px;
     margin: 0 auto;
     background: url(../images/circle-design.svg);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 /* Banner Area Style End 

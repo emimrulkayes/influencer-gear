@@ -84,7 +84,7 @@
     }
 }
 
-/*  Medium devices (portrait phones, less than 768px) */
+/*  Medium devices (portrait phones, less than 992px) */
 @media only screen and (min-width: 768px) and (max-width: 991.98px) { 
 
     .nav-menus {
