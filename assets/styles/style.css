@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Saira+Stencil+One&display=swap');
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    /* 
+    font-family: 'Saira Stencil One', cursive;
+    font-family: 'Roboto', sans-serif;
+    */
+}
+
+/*----- Reuseable Styles -----*/
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.section-space {
+    padding: 60px 0;
+}
+
+/*----- Header Area Style Start -----*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.brand-logo .logo {
+    text-decoration: none;
+    color: #E02C6D;
+    font-family: 'Saira Stencil One', cursive;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+/*----- Menu Style -----*/
+.nav-menus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+li:not(:last-child) {
+    margin-right: 10px;
+}
+a.menu-link {
+    text-decoration: none;
+    color: #3A3A3A;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+}
+
+/*------ Nav Right Style ------*/
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30px;
+
+}
+.nav-right .search-bar {
+    margin-right: 20px;
+    font-size: 24px;
+}
+.nav-right .shopping-cart {
+    font-size: 24px;
+}
+/* Header Area Style End 
+---------------------------------*/
+
