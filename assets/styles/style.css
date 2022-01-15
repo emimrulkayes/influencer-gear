@@ -9,10 +9,7 @@ body {
     font-weight: 400;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
-    /* 
-    font-family: 'Saira Stencil One', cursive;
-    font-family: 'Roboto', sans-serif;
-    */
+    position: relative;
 }
 
 /*----- Reuseable Styles -----*/
@@ -78,17 +75,38 @@ h1, h2, h3, h4, h5, h6 {
 .btn:hover i::before {
     padding-left: 2px;
 }
-
 .btn i {
     vertical-align: middle;
 }
 
 /*----- Header Area Style Start -----*/
+.header-area {
+    position: fixed;
+    left: 0;
+    right: 0;
+    right: 0;
+    background: #fff;
+    z-index: 999;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+}
+.navbar #toggle-menu {
+    display: none;
+}
+.navbar .mobile-menu .nav-toggle-menu {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.navbar .mobile-menu .nav-toggle-menu i {
+    font-size: 30px;
+    color: #0A0826;
+    
 }
 .brand-logo .logo {
     text-decoration: none;
@@ -150,9 +168,104 @@ a.active {
 /* Header Area Style End 
 ---------------------------------*/
 
+/* Mobile Menu Area Style Start
+---------------------------------*/
+#toggle-menu {
+  display: block;
+  position: relative;
+  z-index: 999;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+#toggle-menu ul li a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#toggle-menu > ul > li > a:hover {
+  color: #E02C6D;
+}
+
+#toggle-menu input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2; 
+}
+
+#toggle-menu span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #0A0826;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#toggle-menu span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#toggle-menu span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#toggle-menu input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#toggle-menu input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#toggle-menu input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+#menu {
+  position: absolute;
+  width: 180px;
+  height: 100vh;
+  margin: -100px 0 0 -235px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+#toggle-menu input:checked ~ ul {
+  transform: none;
+}
+/* Mobile Menu Area Style 
+---------------------------------*/
+
 /* Bannner Area Style 
 ---------------------------------*/
 .banner-area {
+    padding-top: 150px;
     padding-bottom: 100px;
 }
 .banner-layout {
@@ -253,7 +366,7 @@ a.active {
     transform: scale(1.2) rotate(-10deg);
 }
 .item .img-box {
-    width: 340px;
+    width: 100%;
     height: auto;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
