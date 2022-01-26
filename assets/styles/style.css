@@ -48,6 +48,13 @@ figure {
     align-items: center;
 }
 
+/* Roky style this */
+.img__border{
+    border: 4px solid;
+    border-image: linear-gradient(purple,yellow);
+    border-image-slice: 1;
+}
+
 .section-space {
     padding: 60px 0;
 }
